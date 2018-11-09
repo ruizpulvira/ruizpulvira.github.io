@@ -1,0 +1,11 @@
+- title: Home
+  url: '/'
+
+- title: Portfolio
+  url: '/portfolio'
+
+- title: Blog
+  url: '/Blog'
+
+- title: Contact
+  url: '/contact'
