@@ -1,0 +1,17 @@
+header {
+	position: relative;
+	.swiper-nav {
+		position: absolute;
+		width: 100%;
+		padding: 23px 0;
+		z-index: 1011;
+
+		li, a {
+			color: #e2e2e2;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-weight: 700;
+		}
+	}
+}
