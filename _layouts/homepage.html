@@ -1,13 +1,57 @@
+---
+title: 'Home'
+---
+
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
+
 <body>
-  
-	
+
+
   <main class="homepage">
-  	{% include homepage-slider.html %}
-  	{% include footer.html %} 	
+    {% include homepage-slider.html %}
+
+    <div class="section-intro">
+      <div class="container custom-container">
+        <div class="row">
+          <div class="col-6 intro-info">
+            <p>“You grow with it, and features you didn’t know would be useful are ready when you are.”</p>
+          </div>
+          <div class="col-6 intro-image">
+            <div class="intro-image__inner">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-projects">
+      <div class="container custom-container">
+        <div class="row">
+          {% for post in site.posts %}
+          <div class="col-12 col-sm-6 project-item">
+            <a class="project-item__link" href="{{ post.url | prepend: site.baseurl }}">
+              <div class="project-item__inner" style="background-image: url({{site.baseurl}}/assets/images/{{ post.image }});">
+                <p class="project-item__title">{{ post.title }}</p>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% comment %}
+      {% for post in site.posts %}
+      <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      {% endfor %}
+      {% endcomment %}
+    </div>
   </main>
 
+  {% include footer.html %}
+
 </body>
+
 </html>

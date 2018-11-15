@@ -1,6 +1,21 @@
 .swiper-container.main-slider {
 	position: relative;
 
+	.banner-word {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		top: 50%;
+		z-index: 1112;
+		color: white;
+		font-size: 3.1rem;
+		text-transform: uppercase;
+		width: 100%;
+		font-family: 'Poppins';
+		text-align: center;
+    letter-spacing: 10px;
+	}
+
 	&:before {
 		content: "";
 		height: 100%;
@@ -8,8 +23,7 @@
 		z-index: 99;
 		position: absolute; 
 
-		background: rgba(3, 3, 3, 0.4);
-
+		background: rgba(5, 5, 5, 0.4);
 	}
 
 	.swiper-slide {
@@ -20,5 +34,5 @@
 			width: 100%;
 			height: auto;
 		}
-	}	
+	}
 }

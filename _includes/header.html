@@ -12,9 +12,15 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					{% for navLinks in site.data.navigation %}
-						<li class="nav-item">
+					{% if page.title contains navLinks.title %}
+						<li class="nav-item active">
 							<a href="{{ navLinks.url }}" class="nav-link">{{ navLinks.title }}</a>
 						</li>
+					{% else %}
+					<li class="nav-item">
+						<a href="{{ navLinks.url }}" class="nav-link">{{ navLinks.title }}</a>
+					</li>
+					{% endif %}
 					{% endfor %}
 				</ul>
 			</div>
