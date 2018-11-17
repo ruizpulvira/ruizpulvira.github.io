@@ -1,0 +1,27 @@
+.post {
+	margin-bottom: 2.3em;
+
+	.main-post-content {
+
+		&__title {
+			color: red;
+		}
+
+		p {
+			color: #e2e2e2;
+			font-size: 13px;
+			padding-right: 50px;
+		}
+
+		a {
+			color: white;
+		}
+	}
+
+	.main-post-image {
+		background-size: cover;
+		background-position-x: 50%;
+		background-position-y: 50%;
+		min-height: calc(100vh - 12vh);
+	}
+}
